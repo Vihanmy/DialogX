@@ -6,3 +6,4 @@ include ':DialogX'
 include ':app'
 rootProject.name = "DialogXDemo"
 include ':DialogXMaterialYou'
+include ':app_learn'
