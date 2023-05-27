@@ -243,7 +243,7 @@ public class FullScreenDialog extends BaseDialog implements DialogXBaseBottomDia
                     if (zoomScale > 1) zoomScale = 1;
                     if (!hideZoomBackground) {
                         imgZoomActivity.setScale(zoomScale);
-                        imgZoomActivity.setRadius(dip2px(15) * ((boxRoot.getHeight() - realY) / boxRoot.getHeight()));
+                        imgZoomActivity.setRadius(120 * ((boxRoot.getHeight() - realY) / boxRoot.getHeight()));
                     }
                 }
             });
