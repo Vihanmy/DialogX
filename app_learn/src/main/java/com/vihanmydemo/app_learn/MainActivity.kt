@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.vihanmydemo.app_learn.demo.FullTransparentActivity
+import com.vihanmydemo.app_learn.demo.ScreenShotActivity
 import java.lang.ref.WeakReference
 
 class MainActivity : AppCompatActivity() {

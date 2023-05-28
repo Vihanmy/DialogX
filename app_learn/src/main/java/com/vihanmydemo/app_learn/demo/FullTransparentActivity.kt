@@ -1,8 +1,8 @@
-package com.vihanmydemo.app_learn
+package com.vihanmydemo.app_learn.demo
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.vihanmydemo.app_learn.R
 
 /**
  *# 一个全透明的activity

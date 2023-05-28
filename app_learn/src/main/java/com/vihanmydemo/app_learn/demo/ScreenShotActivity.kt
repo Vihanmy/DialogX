@@ -1,4 +1,4 @@
-package com.vihanmydemo.app_learn
+package com.vihanmydemo.app_learn.demo
 
 import android.app.Activity
 import android.graphics.Bitmap
@@ -9,14 +9,12 @@ import android.util.Log
 import android.view.RoundedCorner
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowInsets
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat.getRootWindowInsets
+import androidx.core.view.ViewCompat
+import com.vihanmydemo.app_learn.R
 import java.lang.ref.WeakReference
-
 
 /**
  *# 获取当前Activity和被压栈的Activity的截图案例
@@ -57,7 +55,7 @@ class ScreenShotActivity : AppCompatActivity() {
 
         window.decorView.post {
 
-            val insets = getRootWindowInsets(window.decorView);
+            val insets = ViewCompat.getRootWindowInsets(window.decorView);
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 val colorTopLeft = insets?.toWindowInsets()?.getRoundedCorner(RoundedCorner.POSITION_TOP_LEFT)

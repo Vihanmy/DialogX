@@ -18,14 +18,14 @@
         </activity>
 
         <activity
-            android:name=".FullTransparentActivity"
+            android:name=".demo.FullTransparentActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|mcc|mnc|locale|touchscreen|keyboard|navigation|fontScale"
             android:exported="false"
             android:theme="@style/DialogXFloatingWindow"
             android:windowSoftInputMode="adjustResize" />
 
-        <activity android:name=".ScreenShotActivity" />
-        
+        <activity android:name=".demo.ScreenShotActivity" />
+
     </application>
 
 </manifest>
