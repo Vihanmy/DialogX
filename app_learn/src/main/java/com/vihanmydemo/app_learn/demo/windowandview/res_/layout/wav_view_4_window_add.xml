@@ -7,9 +7,14 @@
     android:id="@+id/dialogRootBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#33565656"
+    android:background="#33ff5656"
     android:orientation="vertical"
     tools:context=".demo.ScreenShotActivity">
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/teal_200" />
 
     <LinearLayout
         android:id="@+id/dialogContentView"
@@ -33,5 +38,11 @@
 
     </LinearLayout>
 
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/teal_200" />
 
 </FrameLayout>

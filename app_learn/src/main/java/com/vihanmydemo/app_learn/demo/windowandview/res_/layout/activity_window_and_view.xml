@@ -14,7 +14,30 @@
         android:layout_height="wrap_content"
         android:background="@color/teal_200"
         android:paddingVertical="10dp"
-        android:text="显示弹窗"
+        android:text="添加View(通过 window 添加 view)"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:paddingVertical="10dp"
+        android:text="添加View(通过 FrameLayout 根布局)"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:paddingVertical="10dp"
+        android:text="改变导航栏和状态栏占位view的背景色"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold" />
