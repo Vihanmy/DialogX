@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".demo.ScreenShotActivity">
 
@@ -14,17 +15,6 @@
         android:background="@color/teal_200"
         android:paddingVertical="10dp"
         android:text="显示弹窗"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/teal_200"
-        android:paddingVertical="10dp"
-        android:text="获取上一个 Activity 的截图"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold" />

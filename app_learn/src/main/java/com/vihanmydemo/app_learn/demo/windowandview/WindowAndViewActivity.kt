@@ -1,15 +1,11 @@
 package com.vihanmydemo.app_learn.demo.windowandview
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.graphics.PixelFormat
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
-import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -26,6 +22,7 @@ import com.vihanmydemo.app_learn.R
  * ```
  */
 class WindowAndViewActivity : AppCompatActivity() {
+    
     private val TAG = this.javaClass.simpleName
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,43 +31,22 @@ class WindowAndViewActivity : AppCompatActivity() {
 
         findViewById<View>(R.id.textView).setOnClickListener {
             addView2ActivityWindow(this)
-            animateViewScale((this.window.decorView), 0.9f)
-            Log.d(TAG, "onCreate: ${this.window.decorView.parent}")
         }
+
     }
 }
 
-
-fun animateViewScale(view: View, scale: Float) {
-    val centerX = view.width / 2f
-    val centerY = view.height / 2f
-
-    val scaleX = ObjectAnimator.ofFloat(view, "scaleX", scale)
-    val scaleY = ObjectAnimator.ofFloat(view, "scaleY", scale)
-
-    scaleX.setDuration(300)
-    scaleY.setDuration(300)
-
-    scaleX.setFloatValues(view.scaleX, scale)
-    scaleY.setFloatValues(view.scaleY, scale)
-
-    scaleX.setInterpolator(AccelerateDecelerateInterpolator())
-    scaleY.setInterpolator(AccelerateDecelerateInterpolator())
-
-    view.pivotX = centerX
-    view.pivotY = centerY
-
-    val animatorSet = AnimatorSet()
-    animatorSet.playTogether(scaleX, scaleY)
-    animatorSet.start()
-}
-
+/**
+ * 添加View到Activity所在的Window中, 注意避免 window leak 的问题
+ *
+ * @param activity
+ */
 private fun addView2ActivityWindow(activity: AppCompatActivity) {
     val manager = activity.getSystemService(AppCompatActivity.WINDOW_SERVICE) as WindowManager
     val addedView = LayoutInflater.from(activity).inflate(R.layout.wav_view_4_window_add, null).apply {
         setOnClickListener {
             it.isVisible = false
-            Toast.makeText(activity, "测测", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "添加的view被点击", Toast.LENGTH_SHORT).show()
         }
     }
     val layoutParams = WindowManager.LayoutParams().apply {
